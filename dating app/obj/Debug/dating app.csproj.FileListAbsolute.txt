@@ -1,0 +1,18 @@
+C:\Users\Tec\source\repos\dating app\dating app\bin\Debug\dating app.exe.config
+C:\Users\Tec\source\repos\dating app\dating app\bin\Debug\dating app.exe
+C:\Users\Tec\source\repos\dating app\dating app\bin\Debug\dating app.pdb
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.csprojAssemblyReference.cache
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\Log ind form.g.cs
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\MainWindow.g.cs
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\App.g.cs
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app_MarkupCompile.cache
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app_MarkupCompile.lref
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\Log ind form.baml
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\MainWindow.baml
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.g.resources
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating_app.Properties.Resources.resources
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.csproj.GenerateResource.cache
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.exe
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.pdb
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\OpretKonto.g.cs
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\OpretKonto.baml
