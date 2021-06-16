@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace dating_app
 {
@@ -38,21 +39,48 @@ namespace dating_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-
-            if (con.State == System.Data.ConnectionState.Open)
+            if (Brugernavn.Text == "" && Adgangskode.Text == "" && mail.Text == "")
             {
-                string insert = "insert into Account(Username, Password, Email) values('" + Brugernavn.Text.ToString() + "','" + Adgangskode.Text.ToString() + "','" + mail.Text.ToString()+ "')'";
-                SqlCommand cmd = new SqlCommand(insert,con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Connection");
+                MessageBox.Show("Udfyld alle felterne");
             }
-            MessageBox.Show("Konto oprettet!!!");
-            MainWindow main = new MainWindow();
-            main.Show();
-
             
+            else
+            {
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {/*
+                    string insert = "insert into Account(Username, Password, Email) values('" + Brugernavn.Text.ToString() + "','" + Adgangskode.Text.ToString() + "','" + mail.Text.ToString() + "')";
+                    SqlCommand cmd = new SqlCommand(insert, con);
+                    cmd.ExecuteNonQuery();*/
+
+
+                    //checks if username  is in database
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Account where Username = '" + Brugernavn.Text + "' ", con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count >= 1)
+                    {
+                        MessageBox.Show("Brugernavn findes. Vælg en ny Brugernavn");
+                    }
+
+                    else
+                    {
+                        //save in the database
+                        
+                        SqlCommand comd = new SqlCommand("insert into Account(Username, Password, Email) values('" + Brugernavn.Text.ToString() + "','" + Adgangskode.Text.ToString() + "','" + mail.Text.ToString() + "')", con);
+                        comd.ExecuteNonQuery();
+                        con.Close();
+                        Brugernavn.Text = "";
+                        MessageBox.Show("Konto oprettet!!!");
+                    }
+                }
+
+                
+                MainWindow main = new MainWindow();
+                main.Show();
+            }
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
