@@ -9,9 +9,9 @@
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="98" Margin="175,10,0,0" TextWrapping="Wrap" Text="Opret en konto" VerticalAlignment="Top" Width="375" FontSize="50"/>
         <TextBox x:Name="Brugernavn" HorizontalAlignment="Left" Height="23" Margin="130,159,0,0" TextWrapping="Wrap" Text="Brugernavn" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus" TextChanged="TextBox_TextChanged_3"/>
-        <TextBox x:Name="Adgangskode" HorizontalAlignment="Left" Height="23" Margin="130,270,0,0" TextWrapping="Wrap" Text="Mail" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="mail" HorizontalAlignment="Left" Height="23" Margin="130,270,0,0" TextWrapping="Wrap" Text="Mail" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus"/>
         <Button Content="Opret en konto" HorizontalAlignment="Left" Margin="296,329,0,0" VerticalAlignment="Top" Width="112" Click="Button_Click"/>
-        <TextBox x:Name="mail" HorizontalAlignment="Left" Height="23" Margin="130,218,0,0" TextWrapping="Wrap" Text="Adgangskode" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_2" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="Adgangskode" HorizontalAlignment="Left" Height="23" Margin="130,218,0,0" TextWrapping="Wrap" Text="Adgangskode" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_2" GotFocus="TextBox_GotFocus"/>
         <Button Content="Tilbage" HorizontalAlignment="Left" Margin="537,329,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
     </Grid>
 </Window>

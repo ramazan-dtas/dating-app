@@ -42,6 +42,8 @@ namespace dating_app
             if (Brugernavn.Text == "" && Adgangskode.Text == "" && mail.Text == "")
             {
                 MessageBox.Show("Udfyld alle felterne");
+                this.Hide();
+                this.Show();
             }
             
             else
@@ -50,12 +52,7 @@ namespace dating_app
                 con.Open();
 
                 if (con.State == System.Data.ConnectionState.Open)
-                {/*
-                    string insert = "insert into Account(Username, Password, Email) values('" + Brugernavn.Text.ToString() + "','" + Adgangskode.Text.ToString() + "','" + mail.Text.ToString() + "')";
-                    SqlCommand cmd = new SqlCommand(insert, con);
-                    cmd.ExecuteNonQuery();*/
-
-
+                {
                     //checks if username  is in database
                     SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Account where Username = '" + Brugernavn.Text + "' ", con);
                     DataTable dt = new DataTable();
@@ -74,10 +71,11 @@ namespace dating_app
                         con.Close();
                         Brugernavn.Text = "";
                         MessageBox.Show("Konto oprettet!!!");
+                        this.Hide();
+                        MainWindow tilbage = new MainWindow();
+                        tilbage.Show();
                     }
                 }
-
-                
                 MainWindow main = new MainWindow();
                 main.Show();
             }

@@ -16,3 +16,5 @@ C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.exe
 C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\dating app.pdb
 C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\OpretKonto.g.cs
 C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\OpretKonto.baml
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\user screen.g.cs
+C:\Users\Tec\source\repos\dating app\dating app\obj\Debug\user screen.baml
